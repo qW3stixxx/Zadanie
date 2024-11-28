@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Zadanie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 10px;
+            margin: 10px;
+        }
+        .menu {
+            background-color: #e6e6e6;
+            padding: 10px;
+        }
+        .content {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .menu a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+        }
+        .right-menu {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        .shapes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .shape-link {
+            text-decoration: none;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .circle.brown {
+            background-color: brown;
+        }
+        .circle.yellow {
+            background-color: yellow;
+        }
+        .circle.red {
+            background-color: red;
+        }
+        .rectangle {
+            width: 50px;
+            height: 25px;
+            display: inline-block;
+        }
+        .rectangle.blue {
+            background-color: blue;
+        }
+        .rectangle.green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LOGO - Aranzhii</h1>
+        <p>Gdańsk, <span id="date"></span></p>
+    </header>
+    <div class="container">
+        <nav class="menu">
+            <b>Lewe menu</b>
+            <ul>
+                <li>
+                    <a href="https://zse.edu.gdansk.pl/" target="_blank">Strona ZSE</a>
+                </li>
+                <li>
+                    <a href="https://www.kuratorium.gda.pl/" target="_blank">Kuratorium</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Aranzhii, 1-P, 29.11.2024</h2>
+            <marquee bgcolor="red">Aranzhii</marquee>
+            <h3>Layout (interfejs strony internetowej) - element konstrukcji graficznej, w którym ustala się:</h3>
+            <ul>
+                <li>1. Rozmieszczenie elementów (treści) na stronie.</li>
+                <li>2. Wygląd (kolorystykę, elementy dekoracyjne, krój czcionki).</li>
+            </ul>
+            <h3>Popularne technologie Layoutu dla stron WWW</h3>
+            <ul>
+                <li>1. w oparciu o tabele (iframe) lub ramy (frame)</li>
+                <li>2. w oparciu o DIV'y</li>
+                <li>3. w oparciu o instrukcje HTML5 (nav, ....)</li>
+            </ul>
+        </main>
+        <aside class="right-menu">
+            <b>Prawe menu</b>
+            <div class="shapes">
+                <a href="tabela_Bochkovskyi.html" class="shape-link">
+                    <div class="rectangle blue"></div>
+                </a>
+                <a href="formularz_Bochkovskyi.html" class="shape-link">
+                    <div class="circle yellow"></div>
+                </a>
+                <a href="plik_bochkovskyi.html" class="shape-link">
+                    <div class="rectangle green"></div>
+                </a>
+                <a href="https://qw3stixxx.github.io/Cz2/" class="shape-link" target="_blank">
+                    <div class="circle brown"></div>
+                </a>
+                <a href="mailto:tima06102008@gmail.com" class="shape-link">
+                    <div class="rectangle red"></div>
+                </a>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>STOPKA - Bochkovskyi</p>
+        <p>Gdańsk, 22.11.2024 <span id="footer-date"></span></p>
+    </footer>
+    <script>
+        const date = new Date().toLocaleDateString();
+        document.getElementById("date").textContent = date;
+        document.getElementById("footer-date").textContent = date;
+    </script>
+</body>
+</html>
